@@ -1,0 +1,10 @@
+# git ignore file
+Achi.Data.Entities.SQL/packages.config
+Achi.Data.Entities.SQL/obj/Debug*/
+Achi.Data.Entities/obj/Debug*/
+Achi.Data.Infrastructure/obj/Debug*/
+Achi.Data/obj/Debug*/
+/packages/EntityFramework.6.1.3
+
+.vs/Achi/v14/.suo
+.vs/Achi/v14*/
