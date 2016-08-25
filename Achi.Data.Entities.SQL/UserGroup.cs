@@ -7,26 +7,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Achi.Data.Entities
+namespace Achi.Data.Entities.SQL
 {
     using System;
     using System.Collections.Generic;
     
     public partial class UserGroup
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UserGroup()
+        {
+            this.PermissionBindings = new HashSet<PermissionBinding>();
+            this.Users = new HashSet<User>();
+        }
+    
         public System.Guid ID { get; set; }
         public int Order { get; set; }
         public string Name { get; set; }
         public string DisplayName { get; set; }
-        public System.Guid UserID { get; set; }
-        public System.Guid PermissionGroupID { get; set; }
-        public bool Allow { get; set; }
+        public bool VersionStatus { get; set; }
         public System.Guid CreatedBy { get; set; }
         public System.DateTime CreatedOn { get; set; }
         public System.Guid LastModifiedBy { get; set; }
         public System.DateTime LastModifiedOn { get; set; }
     
-        public virtual PermissionGroup PermissionGroup { get; set; }
-        public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PermissionBinding> PermissionBindings { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

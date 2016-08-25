@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Achi.Data.Entities
+namespace Achi.Data.Entities.SQL
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AchiDbEntities : DbContext
+    public partial class AchiEntities : DbContext
     {
-        public AchiDbEntities()
-            : base("name=AchiDbEntities")
+        public AchiEntities()
+            : base("name=AchiEntities")
         {
         }
     
@@ -26,7 +26,7 @@ namespace Achi.Data.Entities
         }
     
         public virtual DbSet<Permission> Permissions { get; set; }
-        public virtual DbSet<PermissionGroup> PermissionGroups { get; set; }
+        public virtual DbSet<PermissionBinding> PermissionBindings { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserGroup> UserGroups { get; set; }
     }

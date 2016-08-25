@@ -7,30 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Achi.Data.Entities
+namespace Achi.Data.Entities.SQL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Permission
+    public partial class PermissionBinding
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Permission()
-        {
-            this.PermissionGroups = new HashSet<PermissionGroup>();
-        }
-    
         public System.Guid ID { get; set; }
-        public int Order { get; set; }
-        public string Name { get; set; }
-        public string DisplayName { get; set; }
+        public System.Guid UserGroupID { get; set; }
+        public System.Guid PermissionID { get; set; }
         public bool VersionStatus { get; set; }
         public System.Guid CreatedBy { get; set; }
         public System.DateTime CreatedOn { get; set; }
         public System.Guid LastModifiedBy { get; set; }
         public System.DateTime LastModifiedOn { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PermissionGroup> PermissionGroups { get; set; }
+        public virtual Permission Permission { get; set; }
+        public virtual UserGroup UserGroup { get; set; }
     }
 }

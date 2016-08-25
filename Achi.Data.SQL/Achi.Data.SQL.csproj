@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9A47171D-B4B2-4A22-8023-F14C767EF3DA}</ProjectGuid>
+    <ProjectGuid>{7D70CEC8-6E5D-4CCC-B894-1E75367C9867}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Achi.Data.Entities</RootNamespace>
-    <AssemblyName>Achi.Data.Entities</AssemblyName>
+    <RootNamespace>Achi.Data.SQL</RootNamespace>
+    <AssemblyName>Achi.Data.SQL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -51,14 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\DeletableEntity.cs" />
-    <Compile Include="Base\ModifiedEntity.cs" />
-    <Compile Include="Base\TypedIdEntity.cs" />
-    <Compile Include="IPermission.cs" />
-    <Compile Include="IPermissionBinding.cs" />
-    <Compile Include="IUser.cs" />
-    <Compile Include="IUserGroup.cs" />
+    <Compile Include="UnitOfWork\AchiUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IQueryableUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Achi.Data.Entities.SQL\Achi.Data.Entities.SQL.csproj">
+      <Project>{b4dc1f15-0b05-4dbd-a97f-321962444d50}</Project>
+      <Name>Achi.Data.Entities.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Achi.Data\Achi.Data.csproj">
+      <Project>{8a2af9ea-b789-426c-a779-86b1c9232232}</Project>
+      <Name>Achi.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -66,12 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Achi.Data.Infrastructure\Achi.Data.Infrastructure.csproj">
-      <Project>{a2cd8277-8c04-4ca2-8cb4-cabaafd8214e}</Project>
-      <Name>Achi.Data.Infrastructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

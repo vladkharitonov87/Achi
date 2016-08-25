@@ -6,3 +6,5 @@
 /Achi.Data.Entities/obj/Debug
 /Achi.Data.Infrastructure/obj/Debug
 /packages/EntityFramework.6.1.3
+/Achi.Data.Entities.SQL/obj/Debug
+/Achi.Data.SQL/obj/Debug
