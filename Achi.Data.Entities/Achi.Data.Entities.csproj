@@ -54,8 +54,8 @@
     <Compile Include="Base\DeletableEntity.cs" />
     <Compile Include="Base\ModifiedEntity.cs" />
     <Compile Include="Base\TypedIdEntity.cs" />
+    <Compile Include="IPermissionType.cs" />
     <Compile Include="IPermission.cs" />
-    <Compile Include="IPermissionBinding.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="IUserGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

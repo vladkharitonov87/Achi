@@ -66,14 +66,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AchiDbContext.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Partials\PermissionType.cs" />
     <Compile Include="Partials\Permission.cs" />
-    <Compile Include="Partials\PermissionBinding.cs" />
     <Compile Include="Partials\User.cs" />
     <Compile Include="Partials\UserGroup.cs" />
     <Compile Include="Permission.cs">
       <DependentUpon>AchiDbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="PermissionBinding.cs">
+    <Compile Include="PermissionType.cs">
       <DependentUpon>AchiDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

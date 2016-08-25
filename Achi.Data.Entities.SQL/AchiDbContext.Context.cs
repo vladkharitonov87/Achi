@@ -13,10 +13,10 @@ namespace Achi.Data.Entities.SQL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AchiEntities : DbContext
+    public partial class AchiDbContext : DbContext
     {
-        public AchiEntities()
-            : base("name=AchiEntities")
+        public AchiDbContext()
+            : base("name=AchiDbContext")
         {
         }
     
@@ -26,7 +26,7 @@ namespace Achi.Data.Entities.SQL
         }
     
         public virtual DbSet<Permission> Permissions { get; set; }
-        public virtual DbSet<PermissionBinding> PermissionBindings { get; set; }
+        public virtual DbSet<PermissionType> PermissionTypes { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserGroup> UserGroups { get; set; }
     }
