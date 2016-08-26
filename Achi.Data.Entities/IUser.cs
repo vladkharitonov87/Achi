@@ -11,5 +11,7 @@ namespace Achi.Data.Entities
 		string LastName { get; set; }
 		Guid? UserGroupID { get; set; }
 		bool VersionStatus { get; set; }
+
+		IUserGroup UserGroup { get; set; }
 	}
 }

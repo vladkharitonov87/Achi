@@ -12,5 +12,8 @@ namespace Achi.Data.Entities
 		DateTime CreatedOn { get; set; }
 		Guid LastModifiedBy { get; set; }
 		DateTime LastModifiedOn { get; set; }
+
+		IPermissionType PermissionType { get; set; }
+		IUserGroup UserGroup { get; set; }
 	}
 }

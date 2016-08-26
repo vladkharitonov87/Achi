@@ -51,9 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\DeletableEntity.cs" />
-    <Compile Include="Base\ModifiedEntity.cs" />
-    <Compile Include="Base\TypedIdEntity.cs" />
+    <Compile Include="Base\IDeletableEntity.cs" />
+    <Compile Include="Base\IModifiedEntity.cs" />
+    <Compile Include="Base\ITypedIdEntity.cs" />
     <Compile Include="IPermissionType.cs" />
     <Compile Include="IPermission.cs" />
     <Compile Include="IUser.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Achi.Data.Entities
 {
@@ -13,5 +14,7 @@ namespace Achi.Data.Entities
 		DateTime CreatedOn { get; set; }
 		Guid LastModifiedBy { get; set; }
 		DateTime LastModifiedOn { get; set; }
+
+		ICollection<IPermission> Permissions { get; set; }
 	}
 }

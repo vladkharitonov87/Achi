@@ -100,6 +100,10 @@
       <Project>{9a47171d-b4b2-4a22-8023-f14c767ef3da}</Project>
       <Name>Achi.Data.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Achi.Data.Infrastructure\Achi.Data.Infrastructure.csproj">
+      <Project>{a2cd8277-8c04-4ca2-8cb4-cabaafd8214e}</Project>
+      <Name>Achi.Data.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
