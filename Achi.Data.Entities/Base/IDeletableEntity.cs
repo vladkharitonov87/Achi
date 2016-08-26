@@ -2,7 +2,7 @@
 
 namespace Achi.Data.Entities.Base
 {
-	public interface IDeletableEntity<TId> : ITypedIdEntity<TId>
+	public interface IDeletableEntity
 	{
 		Status VersionStatus { get ; set; }
 	}

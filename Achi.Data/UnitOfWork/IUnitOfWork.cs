@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Achi.Data.SQL.UnitOfWork
+namespace Achi.Data.UnitOfWork
 {
 	public interface IUnitOfWork : IDisposable
 	{

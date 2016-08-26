@@ -4,7 +4,7 @@ using Achi.Data.Infrastructure.Enums;
 
 namespace Achi.Data.Entities.SQL
 {
-	public partial class Permission :IModifiedEntity<Guid>, IPermission
+	public partial class Permission : ITypedIdEntity<Guid>, IDeletableEntity, IModifiedEntity, IPermission
 	{
 		IPermissionType IPermission.PermissionType
 		{
@@ -20,7 +20,7 @@ namespace Achi.Data.Entities.SQL
 			set { UserGroup = (UserGroup) value; }
 		}
 
-		Status IDeletableEntity<Guid>.VersionStatus
+		Status IDeletableEntity.VersionStatus
 		{
 			get { return VersionStatus ? Status.Active : Status.Deleted; }
 			set { VersionStatus = value == Status.Active; }

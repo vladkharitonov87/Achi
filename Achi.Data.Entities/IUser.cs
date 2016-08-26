@@ -1,16 +1,15 @@
 ﻿using System;
+using Achi.Data.Entities.Base;
 
 namespace Achi.Data.Entities
 {
-	public interface IUser
+	public interface IUser : ITypedIdEntity<Guid>, IDeletableEntity
 	{
-		Guid ID { get; set; }
 		string UserName { get; set; }
 		string Password { get; set; }
 		string FirstName { get; set; }
 		string LastName { get; set; }
 		Guid? UserGroupID { get; set; }
-		bool VersionStatus { get; set; }
 
 		IUserGroup UserGroup { get; set; }
 	}

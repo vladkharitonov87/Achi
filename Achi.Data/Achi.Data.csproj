@@ -49,9 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IKeyedAsGuidRepository.cs" />
-    <Compile Include="IKeyedRepository.cs" />
+    <Compile Include="UnitOfWork\IKeyedAsGuidRepository.cs" />
+    <Compile Include="UnitOfWork\IKeyedRepository.cs" />
+    <Compile Include="UnitOfWork\IQueryableUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IPermissionRepository.cs" />
+    <Compile Include="Repositories\IPermissionTypeRepository.cs" />
+    <Compile Include="Repositories\IUserGroupRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -62,9 +68,6 @@
       <Project>{9a47171d-b4b2-4a22-8023-f14c767ef3da}</Project>
       <Name>Achi.Data.Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

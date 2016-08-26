@@ -2,7 +2,7 @@
 
 namespace Achi.Data.Entities.Base
 {
-	public interface IModifiedEntity<TId>: IDeletableEntity<TId>
+	public interface IModifiedEntity
 	{
 		Guid CreatedBy { get; set; }
 

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using Achi.Data.Entities.Base;
 
-namespace Achi.Data.SQL.UnitOfWork
+namespace Achi.Data.UnitOfWork
 {
 	public interface IQueryableUnitOfWork : IUnitOfWork
 	{
@@ -54,6 +55,15 @@ namespace Achi.Data.SQL.UnitOfWork
 		/// <exception cref="ArgumentNullException"> if <paramref name="entity"/> is null</exception>
 		/// <typeparam name="TEntity">A POCO that represents an Entity Framework entity</typeparam>
 		void Delete<TEntity>(TEntity entity)
+			where TEntity : class, IDeletableEntity;
+
+		/// <summary>
+		/// Deletes the specified entity
+		/// </summary>
+		/// <param name="entity">Entity to delete</param>
+		/// <exception cref="ArgumentNullException"> if <paramref name="entity"/> is null</exception>
+		/// <typeparam name="TEntity">A POCO that represents an Entity Framework entity</typeparam>
+		void Remove<TEntity>(TEntity entity)
 			where TEntity : class;
 
 		/// <summary>

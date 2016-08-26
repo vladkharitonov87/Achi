@@ -51,18 +51,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repositories\PermissionTypeRepository.cs" />
+    <Compile Include="Repositories\PermissionRepository.cs" />
+    <Compile Include="Repositories\UserGroupRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="UnitOfWork\AchiUnitOfWork.cs" />
-    <Compile Include="UnitOfWork\IQueryableUnitOfWork.cs" />
-    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\KeyedAsGuidRepository.cs" />
+    <Compile Include="UnitOfWork\KeyedRepository.cs" />
+    <Compile Include="UnitOfWork\Repository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Achi.Data.Entities.SQL\Achi.Data.Entities.SQL.csproj">
       <Project>{b4dc1f15-0b05-4dbd-a97f-321962444d50}</Project>
       <Name>Achi.Data.Entities.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Achi.Data.Entities\Achi.Data.Entities.csproj">
+      <Project>{9a47171d-b4b2-4a22-8023-f14c767ef3da}</Project>
+      <Name>Achi.Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Achi.Data.Infrastructure\Achi.Data.Infrastructure.csproj">
+      <Project>{a2cd8277-8c04-4ca2-8cb4-cabaafd8214e}</Project>
+      <Name>Achi.Data.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\Achi.Data\Achi.Data.csproj">
       <Project>{8a2af9ea-b789-426c-a779-86b1c9232232}</Project>

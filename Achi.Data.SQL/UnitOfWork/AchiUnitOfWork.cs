@@ -4,7 +4,10 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Linq;
+using Achi.Data.Entities.Base;
 using Achi.Data.Entities.SQL;
+using Achi.Data.Infrastructure.Enums;
+using Achi.Data.UnitOfWork;
 
 namespace Achi.Data.SQL.UnitOfWork
 {
@@ -118,7 +121,24 @@ namespace Achi.Data.SQL.UnitOfWork
 		/// <param name="entity">Entity to delete</param>
 		/// <exception cref="ArgumentNullException"> if <paramref name="entity"/> is null</exception>
 		/// <typeparam name="TEntity">A POCO that represents an Entity Framework entity</typeparam>
-		public void Delete<TEntity>(TEntity entity) where TEntity : class
+		public void Delete<TEntity>(TEntity entity) where TEntity : class, IDeletableEntity
+		{
+			if (entity == null)
+				throw new ArgumentNullException(nameof(entity));
+
+			Set<TEntity>().Attach(entity);
+			Context.Entry(entity).Entity.VersionStatus = Status.Deleted;
+            Context.Entry(entity).State = EntityState.Modified;
+			Context.ChangeTracker.DetectChanges();
+		}
+
+		/// <summary>
+		/// Deletes the specified entity
+		/// </summary>
+		/// <param name="entity">Entity to delete</param>
+		/// <exception cref="ArgumentNullException"> if <paramref name="entity"/> is null</exception>
+		/// <typeparam name="TEntity">A POCO that represents an Entity Framework entity</typeparam>
+		public void Remove<TEntity>(TEntity entity) where TEntity : class
 		{
 			if (entity == null)
 				throw new ArgumentNullException(nameof(entity));

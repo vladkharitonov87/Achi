@@ -4,7 +4,7 @@ using Achi.Data.Infrastructure.Enums;
 
 namespace Achi.Data.Entities.SQL
 {
-	public partial class User : IDeletableEntity<Guid>, IUser
+	public partial class User : ITypedIdEntity<Guid>, IDeletableEntity, IUser
 	{
 		IUserGroup IUser.UserGroup
 		{
@@ -13,7 +13,7 @@ namespace Achi.Data.Entities.SQL
 			set { UserGroup = (UserGroup) value; }
 		}
 
-		Status IDeletableEntity<Guid>.VersionStatus
+		Status IDeletableEntity.VersionStatus
 		{
 			get { return VersionStatus ? Status.Active : Status.Deleted; }
 			set { VersionStatus = value == Status.Active; }
