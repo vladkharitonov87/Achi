@@ -11,7 +11,7 @@ using Achi.Data.UnitOfWork;
 
 namespace Achi.Data.SQL.UnitOfWork
 {
-	class AchiUnitOfWork : IQueryableUnitOfWork
+	public class AchiUnitOfWork : IQueryableUnitOfWork
 	{
 		protected AchiDbContext Context;
 

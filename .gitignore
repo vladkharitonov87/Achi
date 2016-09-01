@@ -8,3 +8,6 @@
 /packages/EntityFramework.6.1.3
 /Achi.Data.Entities.SQL/obj/Debug
 /Achi.Data.SQL/obj/Debug
+/Achi.Data.Autofac/obj/Debug
+/packages/Autofac.Configuration.4.0.0
+/packages
