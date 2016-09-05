@@ -2,18 +2,11 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Achi.Data/obj/Debug
-/Achi.Data.Entities/obj/Debug
-/Achi.Data.Infrastructure/obj/Debug
 /packages/EntityFramework.6.1.3
-/Achi.Data.Entities.SQL/obj/Debug
-/Achi.Data.SQL/obj/Debug
-/Achi.Data.Autofac/obj/Debug
 /packages/Autofac.Configuration.4.0.0
 /packages
-/Achi.Data.Autofac/obj/Debug
-/Achi/bin
-/Achi/obj/Debug
 .vs/Achi/v14*/
 .vs/Achi/v14/.suo
 *.suo
+/*/bin
+/*/obj/Debug
