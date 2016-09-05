@@ -4,14 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a3555c0b83b74bb492d05c39e4eb9c6c" Name="Diagram1">
-        <EntityTypeShape EntityType="AchiModel.Permission" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AchiModel.PermissionType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AchiModel.User" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AchiModel.UserGroup" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+      <Diagram DiagramId="d3b2224fa79e470faa21196fc5b5ea5a" Name="Diagram1">
+        <EntityTypeShape EntityType="AchiModel.Account" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AchiModel.Permission" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AchiModel.PermissionType" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AchiModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AchiModel.UserGroup" Width="1.5" PointX="3.5" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="AchiModel.FK_Account_User" ManuallyRouted="false" />
+        <AssociationConnector Association="AchiModel.FK_Account_UserGroup" ManuallyRouted="false" />
         <AssociationConnector Association="AchiModel.FK_PermissionGroup_Permission" ManuallyRouted="false" />
         <AssociationConnector Association="AchiModel.FK_PermissionGroup_UserGroup" ManuallyRouted="false" />
-        <AssociationConnector Association="AchiModel.FK_User_User" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

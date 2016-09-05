@@ -12,3 +12,5 @@
 /packages/Autofac.Configuration.4.0.0
 /packages
 /Achi.Data.Autofac/obj/Debug
+/Achi/bin
+/Achi/obj/Debug

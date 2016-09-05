@@ -54,6 +54,7 @@
     <Compile Include="Base\IDeletableEntity.cs" />
     <Compile Include="Base\IModifiedEntity.cs" />
     <Compile Include="Base\ITypedIdEntity.cs" />
+    <Compile Include="IAccount.cs" />
     <Compile Include="IPermissionType.cs" />
     <Compile Include="IPermission.cs" />
     <Compile Include="IUser.cs" />
