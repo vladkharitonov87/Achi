@@ -4,7 +4,7 @@ using Achi.Data.Entities.Base;
 
 namespace Achi.Data.Entities
 {
-	public interface IPermissionType : ITypedIdEntity<Guid>, IDeletableEntity, IModifiedEntity
+	public interface IPermissionType : ITypedIdEntity<Guid>
 	{
 		int Order { get; set; }
 		string Name { get; set; }

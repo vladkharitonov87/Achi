@@ -12,15 +12,20 @@ namespace Achi.Data.Entities.SQL
     using System;
     using System.Collections.Generic;
     
-    public partial class Permission
+    public partial class Account
     {
         public System.Guid ID { get; set; }
-        public System.Guid UserGroupID { get; set; }
-        public System.Guid PermissionID { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public System.Guid UserID { get; set; }
+        public Nullable<System.Guid> UserGroupID { get; set; }
+        public bool VersionStatus { get; set; }
         public System.Guid CreatedBy { get; set; }
         public System.DateTime CreatedOn { get; set; }
+        public System.Guid LastModifiedBy { get; set; }
+        public System.DateTime LastModifiedOn { get; set; }
     
-        public virtual PermissionType PermissionType { get; set; }
+        public virtual User User { get; set; }
         public virtual UserGroup UserGroup { get; set; }
     }
 }

@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>AchiDbContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="AchiDbContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -66,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AchiDbContext.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Partials\Account.cs" />
     <Compile Include="Partials\PermissionType.cs" />
     <Compile Include="Partials\Permission.cs" />
     <Compile Include="Partials\User.cs" />

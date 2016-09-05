@@ -17,8 +17,8 @@ namespace Achi.Data.Entities.SQL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UserGroup()
         {
+            this.Accounts = new HashSet<Account>();
             this.Permissions = new HashSet<Permission>();
-            this.Users = new HashSet<User>();
         }
     
         public System.Guid ID { get; set; }
@@ -32,8 +32,8 @@ namespace Achi.Data.Entities.SQL
         public System.DateTime LastModifiedOn { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Permission> Permissions { get; set; }
+        public virtual ICollection<Account> Accounts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<Permission> Permissions { get; set; }
     }
 }

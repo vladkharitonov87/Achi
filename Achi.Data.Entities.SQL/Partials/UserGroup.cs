@@ -5,7 +5,7 @@ using Achi.Data.Infrastructure.Enums;
 
 namespace Achi.Data.Entities.SQL
 {
-	public partial class UserGroup : ITypedIdEntity<Guid>, IDeletableEntity, IModifiedEntity, IUserGroup
+	public partial class UserGroup : IUserGroup
 	{
 		ICollection<IPermission> IUserGroup.Permissions
 		{
@@ -14,11 +14,11 @@ namespace Achi.Data.Entities.SQL
 			set { Permissions = (ICollection<Permission>) value; }
 		}
 
-		ICollection<IUser> IUserGroup.Users
+		ICollection<IAccount> IUserGroup.Accounts
 		{
-			get { return (ICollection<IUser>) Users; }
+			get { return (ICollection<IAccount>)Accounts; }
 
-			set { Users = (ICollection<User>) value; }
+			set { Accounts = (ICollection<Account>) value; }
 		}
 
 		Status IDeletableEntity.VersionStatus
