@@ -1,10 +1,6 @@
-﻿using System;
-using Achi.Data.Entities.Base;
-using Achi.Data.Infrastructure.Enums;
-
-namespace Achi.Data.Entities.SQL
+﻿namespace Achi.Data.Entities.SQL
 {
-	public partial class Permission : ITypedIdEntity<Guid>, IDeletableEntity, IModifiedEntity, IPermission
+	public partial class Permission : IPermission
 	{
 		IPermissionType IPermission.PermissionType
 		{
@@ -18,12 +14,6 @@ namespace Achi.Data.Entities.SQL
 			get { return UserGroup; }
 
 			set { UserGroup = (UserGroup) value; }
-		}
-
-		Status IDeletableEntity.VersionStatus
-		{
-			get { return VersionStatus ? Status.Active : Status.Deleted; }
-			set { VersionStatus = value == Status.Active; }
 		}
 	}
 }

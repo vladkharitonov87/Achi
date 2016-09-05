@@ -24,11 +24,8 @@ namespace Achi.Data.Entities.SQL
         public int Order { get; set; }
         public string Name { get; set; }
         public string DisplayName { get; set; }
-        public bool VersionStatus { get; set; }
         public System.Guid CreatedBy { get; set; }
         public System.DateTime CreatedOn { get; set; }
-        public System.Guid LastModifiedBy { get; set; }
-        public System.DateTime LastModifiedOn { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Permission> Permissions { get; set; }

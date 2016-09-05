@@ -11,6 +11,6 @@ namespace Achi.Data.Entities
 		string DisplayName { get; set; }
 
 		ICollection<IPermission> Permissions { get; set; }
-		ICollection<IUser> Users { get; set; }
+		ICollection<IAccount> Accounts { get; set; }
 	}
 }

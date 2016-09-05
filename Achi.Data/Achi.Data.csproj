@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IRepositoryFactory.cs" />
+    <Compile Include="Repositories\IAccountRepository.cs" />
     <Compile Include="UnitOfWork\IKeyedAsGuidRepository.cs" />
     <Compile Include="UnitOfWork\IKeyedRepository.cs" />
     <Compile Include="UnitOfWork\IQueryableUnitOfWork.cs" />
